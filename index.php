@@ -1,10 +1,11 @@
-/* php program on file handling */ 
 <?php
+/* php program on file handling */ 
+
 	if(isset($_POST['username'])) {
 
 		$username=$_POST['username'];
 		$email =$_POST['email'];
-	/	if(empty($username) ||empty($email)){
+		if(empty($username) ||empty($email)){
 			$status="please enter valid username and email";
 
 		}
@@ -51,6 +52,8 @@
 				<li>
 					<input type="submit" name="submit" value="submit" />
 				</li>
+				<li>	
+					<a href="retrieve.php">view Registered people</a>
 				<?php
 					if (isset($status)) {
 						echo "<li><h1>$status<h1></li>";
